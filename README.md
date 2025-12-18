@@ -16,27 +16,27 @@ TODO
 
 Логическая модель:
 
-``` mermaid
+```mermaid
 erDiagram
     clients {
         int id PK
         text full_name "not null"
         text email "unique"
         text phone
-        timestamp created_at "default: now()"
+        timestamp created_at "default now()"
     }
 
     agents {
         int id PK
         text full_name "not null"
         date hired_at "not null"
-        numeric(5,2) commission_rate
+        numeric commission_rate
     }
 
     properties {
         int id PK
         text city
-        numeric(12,2) price
+        numeric price
         text property_type
     }
 
@@ -54,7 +54,7 @@ erDiagram
         int agent_id FK "not null"
         int property_id FK "not null"
         date deal_date
-        numeric(12,2) deal_price
+        numeric deal_price
     }
 
     clients ||--o{ viewings : "made_viewings"
