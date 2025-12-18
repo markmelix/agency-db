@@ -65,3 +65,14 @@ erDiagram
     agents ||--o{ deals : "closed_deals"
     properties ||--o{ deals : "sold_properties"
 ```
+
+### Запуск
+
+``` python
+docker compose down -v
+docker compose up -d
+uv sync
+uv run init.py
+uv run gendata.py
+uv run loaddata.py
+```

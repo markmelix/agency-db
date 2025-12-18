@@ -1,0 +1,10 @@
+[project]
+name = "agency-db"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "faker>=39.0.0",
+    "psycopg>=3.3.2",
+]
